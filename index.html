@@ -1,160 +1,327 @@
 <!doctype html>
 <html class="no-js" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Daily Score</title>
 
+  <!-- Zurb Foundation -->
   <link rel="stylesheet"
     href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 
-<style>
-  body {
-    background-color: #f5f7fa;
-  }
+  <!-- Custom styling -->
+  <style>
 
-  .top-bar {
-    background-color: #1f2937;
-  }
+    body {
+      background-color: #f5f7fa;
+    }
 
-  .top-bar .menu {
-    background-color: #1f2937;
-  }
+    .top-bar {
+      background-color: #1f2937;
+    }
 
-  .top-bar a,
-  .top-bar .menu-text {
-    color: white;
-  }
+    .top-bar .menu {
+      background-color: #1f2937;
+    }
 
-  .callout.large {
-    background-color: #e8eef7;
-    padding: 4rem 1rem;
-  }
+    .top-bar a,
+    .top-bar .menu-text {
+      color: white;
+    }
 
-  .callout h1 {
-    font-weight: bold;
-    font-size: 3rem;
-  }
+    .callout.large {
+      background-color: #e8eef7;
+      padding: 4rem 1rem;
+    }
 
-  .row {
-    margin-top: 2rem;
-  }
+    .callout h1 {
+      font-weight: bold;
+      font-size: 3rem;
+    }
 
-  h3 {
-    font-weight: bold;
-  }
-</style>
+    .row {
+      margin-top: 2rem;
+    }
 
+    h3 {
+      font-weight: bold;
+    }
+
+  </style>
 </head>
 
 
 <body>
 
-  <!-- Top navigation bar -->
+  <!-- Top navigation -->
   <div class="top-bar">
+
     <div class="top-bar-left">
+
       <ul class="menu">
         <li class="menu-text">Daily Score</li>
         <li><a href="#">Home</a></li>
         <li><a href="#">My Day</a></li>
       </ul>
+
     </div>
+
   </div>
+
 
   <!-- Main banner -->
   <div class="callout large">
+
     <div class="row column text-center">
+
       <h1>How Was Your Day?</h1>
+
       <p class="lead">
         Track your health, productivity, growth, and balance.
       </p>
-      <a href="#" class="button large">Start My Check-In</a>
+
+      <a href="#checkin" class="button large">
+        Start My Check-In
+      </a>
+
     </div>
+
   </div>
 
- <!-- Daily check-in categories -->
-<div class="row">
 
-  <div class="medium-4 columns">
-    <div class="callout">
-      <h3>Health & Fitness</h3>
+  <!-- Daily check-in -->
+  <div class="row" id="checkin">
 
-      <label>
-        <input type="checkbox"> Lifted / exercised
-      </label>
 
-      <label>
-        <input type="checkbox"> Did cardio
-      </label>
+    <!-- Health -->
+    <div class="medium-4 columns">
 
-      <label>
-        <input type="checkbox"> Hit protein goal
-      </label>
+      <div class="callout score-category">
 
-      <label>
-        <input type="checkbox"> Hit calorie goal
-      </label>
+        <h3>Health & Fitness</h3>
+
+        <label>
+          <input type="checkbox">
+          Lifted / exercised
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Did cardio
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Hit protein goal
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Hit calorie goal
+        </label>
+
+      </div>
+
     </div>
+
+
+    <!-- Productivity -->
+    <div class="medium-4 columns">
+
+      <div class="callout score-category">
+
+        <h3>Productivity</h3>
+
+        <label>
+          <input type="checkbox">
+          Completed schoolwork
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Worked on a skill
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Handled important responsibilities
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- Life and Social -->
+    <div class="medium-4 columns">
+
+      <div class="callout score-category">
+
+        <h3>Life & Social</h3>
+
+        <label>
+          <input type="checkbox">
+          Made time for myself
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Checked on friends or family
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Tried something new
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Talked to someone new
+        </label>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="medium-4 columns">
-    <div class="callout">
-      <h3>Productivity</h3>
-
-      <label>
-        <input type="checkbox"> Completed schoolwork
-      </label>
-
-      <label>
-        <input type="checkbox"> Worked on a skill
-      </label>
-
-      <label>
-        <input type="checkbox"> Handled important responsibilities
-      </label>
-    </div>
-  </div>
-
-  <div class="medium-4 columns">
-    <div class="callout">
-      <h3>Life & Social</h3>
-
-      <label>
-        <input type="checkbox"> Made time for myself
-      </label>
-
-      <label>
-        <input type="checkbox"> Checked on friends or family
-      </label>
-
-      <label>
-        <input type="checkbox"> Tried something new
-      </label>
-
-      <label>
-        <input type="checkbox"> Talked to someone new
-      </label>
-    </div>
-  </div>
-
-</div>
 
   <hr>
 
+
+  <!-- Score -->
   <div class="row column text-center">
-    <h3>Your Daily Score</h3>
-    <p>Complete your daily check-in to see how balanced your day was.</p>
+
+    <div class="callout">
+
+      <h3>Your Daily Score</h3>
+
+      <p>
+        Check off what you accomplished today, then calculate your score.
+      </p>
+
+      <button class="button large" id="calculateButton">
+        Calculate My Score
+      </button>
+
+      <h2 id="scoreResult">
+        0 / 100
+      </h2>
+
+      <p id="gradeResult">
+        Your grade will appear here.
+      </p>
+
+    </div>
+
   </div>
 
+
+  <!-- Foundation JavaScript -->
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js">
-  </script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
 
   <script>
     $(document).foundation();
   </script>
 
+
+  <!-- Daily Score JavaScript -->
+  <script>
+
+    document
+      .getElementById("calculateButton")
+      .addEventListener("click", function () {
+
+        const categories =
+          document.querySelectorAll(".score-category");
+
+        const allCheckboxes =
+          document.querySelectorAll(
+            '.score-category input[type="checkbox"]'
+          );
+
+        const checkedBoxes =
+          document.querySelectorAll(
+            '.score-category input[type="checkbox"]:checked'
+          );
+
+
+        let categoriesCompleted = 0;
+
+
+        categories.forEach(function (category) {
+
+          const checkedInCategory =
+            category.querySelector(
+              'input[type="checkbox"]:checked'
+            );
+
+          if (checkedInCategory) {
+            categoriesCompleted++;
+          }
+
+        });
+
+
+        let score = categoriesCompleted * 30;
+
+
+        if (categoriesCompleted === 3) {
+
+          const extraCompleted =
+            checkedBoxes.length - 3;
+
+          const totalExtras =
+            allCheckboxes.length - 3;
+
+          score =
+            90 +
+            Math.round(
+              (extraCompleted / totalExtras) * 10
+            );
+
+        }
+
+
+        let grade;
+
+
+        if (score >= 90) {
+          grade = "A";
+
+        } else if (score >= 75) {
+          grade = "B";
+
+        } else if (score >= 60) {
+          grade = "C";
+
+        } else if (score >= 30) {
+          grade = "D";
+
+        } else {
+          grade = "F";
+        }
+
+
+        document
+          .getElementById("scoreResult")
+          .textContent =
+          score + " / 100";
+
+
+        document
+          .getElementById("gradeResult")
+          .textContent =
+          "Grade: " + grade;
+
+      });
+
+  </script>
+
 </body>
+
 </html>
